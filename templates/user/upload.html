@@ -1,0 +1,35 @@
+{%include "user/header.html"  with details=details%}
+{%load static%}
+<center>
+        <h3 class="prescription-head">Upload Prescription</h3>
+        <div class="container">
+
+            <div class="products-container">
+                <form>
+                <div>
+                    <h4 class="heading"> Valid Prescription Guide</h4><br />
+                    <p>Your Prescription will be sent to the pharmacist for processing.</p><br />
+                    <ul style="text-align: left; margin-left:40px; line-height:24px;font-weight:bold;">
+                        <li>Do not crop any part of the prescription</li>
+                        <li>Avoid blurred images</li>
+                        <li>Include Details of Doctor and patient, date of visit</li>
+                        <li>supported files PNG,JPEG,PDF</li>
+                        <li>File Size Limit 5MB</li> 
+                        <li>Upload Your Prescription Here</li><br>        
+                    </ul>
+                    <input type="file" name="upload-prescription"/><br/>
+                    <input type="submit" value="upload" class="btn btn-success" style="margin-top:10px;"/>
+                </div>
+            </form>
+
+            </div>
+            
+
+        </div>
+
+    </center>
+
+
+</body>
+
+</html>

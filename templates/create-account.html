@@ -1,0 +1,39 @@
+{%include "header.html"%}
+{%load static %}
+        <div class="signup-container">
+            <div class="create-ad-section"  style="background-image:url({% static 'ads/bestdeal.png'%})"></div>
+            <div>
+                <div class="create-account-module"><br />
+                    {% if message %}
+                        <center><h6 style="color: red">{{message}}</h6></center>
+                    {% endif %}
+
+                    <h4>Create Account</h4>
+                    <form method="POST">
+                        {% csrf_token %}
+                        <label><b>First Name</b></label><br />
+                        <input class="input" type="text" placeholder="Enter Your First Name " name="fname" required/><br />
+                        <label><b>Last Name</b></label><br />
+                        <input class="input" type="text" placeholder="Enter Your Last Name " name="lname" required /><br />
+                        <label><b>Mobile No</b></label><br/>
+                        <input class="input" type="phone" placeholder="Enter Your mobile no "  name="mobile" required /><br />
+                        <label><b>Gender</b></label>
+                        <input type="radio" name="gender" style="margin-left: 15px;margin-top:10px;margin-bottom:10px;font-size: small;" value="Male" required/>Male
+                        <input type="radio" name="gender" style="margin-left: 15px;margin-top:10px;margin-bottom:10px;font-size: small;" value="Female" required/>Female<br />
+
+                        <label><b>Enter OTP</b></label><br />
+                        <input class="input" type="text" placeholder="Enter OTP " name="otp" required/><br />
+                        <br/><center>
+                        <p>By continuing you agree to our Terms and Conditions.</p>
+                        
+                        <input class="submit" type="submit" value="CREATE" /></center>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </center>
+
+</body>
+
+</html>

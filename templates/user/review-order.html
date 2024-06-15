@@ -1,0 +1,88 @@
+{%include "user/header.html" with details=details%}
+{%load static%}
+<center>
+        <h3 class="prescription-head">Review Your Order</h3>
+        <div class="container">
+            <div class="payment-details">
+    
+                <table>
+                    <tr>
+                        <td style="font-weight: bold;">Delivery Address</td>
+                         <td><a href="{% url 'user-prescription'%}" class="btn btn-success">Change Address</a></td>
+                    </tr>
+                    <tr>
+                        
+                        <td colspan="3" style="border-bottom: 2px solid black"></td>
+                    </tr>
+                    <tr>
+                        <td>Name:</td>
+                        <td>{{order_summary.name}}</td>
+                    </tr>
+                    <tr>
+                        <td>Mobile:</td>
+                        <td>{{order_summary.mobile}}</td>
+                    </tr>
+                    <tr>
+                        <td>Address:</td>
+                        <td>{{order_summary.address}}</td>
+                    </tr>
+                    
+                    <tr>
+                        <td style="font-weight: bold;">Payment details</td>
+                    </tr>
+                     <tr>
+                        
+                        <td colspan="3" style="border-bottom: 2px solid black"></td>
+                    </tr>
+                    <tr>
+                        <td>MRP TOTAL:</td>
+                        <td>{{payment_summary.mrp_total}}</td>
+                    </tr>
+                    <tr>
+                        <td>Shipping Charges:</td>
+                        <td>{{payment_summary.shipping_charges}}</td>
+                    </tr>
+                    <tr>
+                        <td>Total Discount:</td>
+                        <td>{{payment_summary.total_discount|floatformat:"2"}}</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" style="border-bottom: 2px solid black"></td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold;">Total Amount</td>
+                        <td style="font-weight: bold;">{{payment_summary.amount_to_pay|floatformat:"2"}}</td>
+                    </tr>
+
+                    <tr>
+
+                        <td colspan="3">
+                            <form method="POST" enctype="multipart/form-data">
+                                {% csrf_token %}
+                                 <div>
+                                    <h4 class="heading">Attach a valid Prescription</h4>
+                                    <p>Some of your medicines needs a valid prescription from a doctor</p>
+                                    <input type="file" name="prescription" required/>
+
+                                </div>
+                                <label style="color:teal;font-size: medium; margin-right: 10px;" ><b>Choose Payment method</b></label></br>
+                                <input type="radio" name="payment_method" value="online" style="margin-right: 5px;"  required>Online
+                                <input type="radio" name="payment_method" value="Cash On Delivery" style="margin-right: 5px; margin-left: 15px;"  required>Cash on Delivery<br/>
+                                <br />
+                                <center><input type="submit" class="btn btn-success" value="Confirm Order" /></center>
+                            </form>
+                        </td>
+                    </tr>
+                </table>
+
+
+            </div>
+
+        </div>
+
+    </center>
+
+
+</body>
+
+</html>

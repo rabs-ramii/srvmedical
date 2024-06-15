@@ -1,0 +1,25 @@
+{%include "header.html"%}
+{%load static%}
+
+
+        <!--Header ends here-->
+        <div class="signup-container">
+            <div class="signup-ad-section" style="background-image:url({% static 'ads/bestdeal.png'%})"></div>
+            <div>
+                <div class="signup-module"><br/><br/>
+                    <h3>Signin</h3><br/>
+                    <p>Enter the 4-digit otp sent to your email to access your orders, special offers, health tips and more!</p><br/><br/>
+                    <label style="color:teal;"><b>Otp</b></label><br />
+                    <form method="POST">
+                        {% csrf_token %}
+                        <input class="input" type="text" placeholder="Enter Your otp here " name="otp" required /><br />
+                        <input  class="submit" type="submit" value="USE OTP"/>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </center>
+    
+</body>
+</html>

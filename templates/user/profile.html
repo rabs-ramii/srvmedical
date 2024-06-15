@@ -1,0 +1,67 @@
+{%include "user/header.html" with details=details%}
+{%load static%}
+<center>
+        <h3 class="prescription-head">Your Account</h3>
+        <div class="container">
+            <div class="profile-menu">                
+                <a href="#" class="profile-menu-a"><label><b>Account Information</b></label></a><br/>
+                <div></div>
+                <a href="{% url 'orders' %}"  class="profile-menu-a"><label><b>My Orders</b></label></a><br/>
+                <div></div>
+                <a href="#"  class="profile-menu-a"><label><b>Saved Address</b></label></a><br/>
+                <div></div>
+                <a href="#"  class="profile-menu-a"><label><b>Contact Us</b></label></a><br />
+                <div></div>
+                <a href="#"  class="profile-menu-a"><label><b>About Us</b></label></a><br />
+                <div></div>
+                <a href="{% url "logout" %}"  class="profile-menu-a"><label><b>Logout</b></label></a><br />
+            
+            
+            </div>
+
+            <div class="products-container">
+                
+                <div style="text-align: left;">
+                    <table>
+                        <tr>
+                            <th>LOGIN INFORMATION</th>
+                            <th>PERSONAL INFORMATION</th>
+                        </tr>
+                        <tr>
+                            <td><label style="color:teal; font-size: small;"><b>EMAIL</b></label></td>
+                            <td><label style="color:teal; font-size: small;"><b>FULL NAME</b></label></td>
+                        </tr>
+                        <tr>
+                            <td>chauhanramprakash514@gmail.com</td>
+                            <td>Ram Prakash Chauhan</td>
+                        </tr>
+                        <tr>
+                            <td><label style="color:teal; font-size: small;"><b>MOBILE NO.</b></label></td>
+                            <td><label style="color:teal; font-size: small;"><b>GENDER</b></label></td>
+                        </tr>
+                        <tr>
+                            <td>9304657617</td>
+                            <td>Male</td>
+                        </tr>
+                        <tr>
+                        
+                            <td colspan="2">
+                                <center><a class="btn btn-success" href={%url 'update-profile'%}>Update Profile<a/></center>
+                            </td>
+                        </tr>
+                       
+                    </table>
+
+                </div>
+
+            </div>
+            
+
+        </div>
+
+    </center>
+
+
+</body>
+
+</html>

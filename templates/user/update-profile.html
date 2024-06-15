@@ -1,0 +1,35 @@
+{%include "user/header.html" with details=details%}
+{%load static%}
+<center>
+        <div class="signup-container">
+            <div class="create-ad-section" style="background-image:url({% static 'ads/bestdeal.png'%})"></div>
+            <div>
+                <div class="create-account-module"><br />
+                    <h3>Update Your Information</h3><br />
+                    <form method="POST">
+                        {% csrf_token %}
+                    <label style="color:teal; font-size: medium;"><b>Mobile No.</b></label><br />
+                    <input class="input" type="text" placeholder="Enter Your mobile no " required/><br /><br />
+                    <label style="color:teal;font-size: medium;"><b>First Name</b></label><br />
+                    <input class="input" type="text" placeholder="Enter Your First Name " required/><br /><br />
+                    <label style="color:teal;font-size: medium;"><b>Last Name</b></label><br />
+                    <input class="input" type="text" placeholder="Enter Your Last Name " required/><br /><br />
+                    <label style="color:teal;font-size: medium; margin-right: 10px;" ><b>Gender</b></label>
+                    <input type="radio" name="gender" style="margin-right: 5px;" required>Male
+                    <input type="radio" name="gender" style="margin-right: 5px; margin-left: 15px;" required>Female<br/>
+                    <br />
+                    <center>
+                        <p>By continuing you agree to our Terms and Conditions.</p>
+
+                        <input class="btn btn-success" type="submit" value="UPDATE" />
+                    </center>
+                </form>
+                </div>
+            </div>
+        </div>
+
+    </center>
+
+</body>
+
+</html>

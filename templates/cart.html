@@ -1,0 +1,100 @@
+{%include "header.html" with count=payment_summary.count%} {%load static%}
+<center>
+  {%if items%}
+  <h3>Order Summary</h3>
+
+  <div class="container">
+    <div class="products-container">
+      <h4 class="heading">Products Details</h4>
+      <br />
+
+      <table>
+        <!--cart data is displayed here-->
+        {%for product in items %}
+        <tr>
+          <td>
+            <img src="/media/{{product.image}}" width="55px" height="40px" />
+          </td>
+          <td colspan="2">{{product.product_name}}</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <b>MRP:{{product.discounted_price|floatformat:"2"}}</b>
+            <span style="text-decoration: line-through; font-size: small"
+              >{{product.price}}</span
+            >
+          </td>
+          <td>
+            QTY:
+            <select>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" style="font-weight: bold">
+            Deliver within 5 working days
+          </td>
+
+          <td>
+            <a class="remove-btn" href="{% url 'remove_from_cart' product.id %}"
+              >Remove</a
+            >
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3" style="border-bottom: 2px solid black"></td>
+        </tr>
+
+        {% endfor %}
+        <!--cart data displayed sectionends here-->
+      </table>
+    </div>
+    <div class="payment-details">
+      <h4 class="heading">Payment Details</h4>
+      <br />
+      <table>
+        <tr>
+          <td>MRP TOTAL:</td>
+          <td>{{payment_summary.mrp_total}}</td>
+        </tr>
+        <tr>
+          <td>Shipping Charges:</td>
+          <td>{{payment_summary.shipping_charges}}</td>
+        </tr>
+        <tr>
+          <td>Total Discount:</td>
+          <td>{{payment_summary.total_discount|floatformat:"2"}}</td>
+        </tr>
+        <tr>
+          <td colspan="3" style="border-bottom: 2px solid black"></td>
+        </tr>
+        <tr>
+          <td style="font-weight: bold;">Amount to Pay</td>
+          <td style="font-weight: bold">
+            {{payment_summary.amount_to_pay|floatformat:"2"}}
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="2">
+            <center>
+              <a
+                href="{% url 'signup'%}"
+                class="btn btn-success"
+              />PROCEED</a>
+            </center>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  {%else%}
+  <h3>Your Cart is empty</h3>
+  {%endif%}
+</center>

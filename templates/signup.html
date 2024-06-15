@@ -1,0 +1,25 @@
+{%include "header.html" with count=count%}
+{%load static%}
+
+
+        <!--Header ends here-->
+        <div class="signup-container">
+            <div class="signup-ad-section" style="background-image:url({% static 'ads/bestdeal.png'%})"></div>
+            <div>
+                <div class="signup-module"><br/><br/>
+                    <h3>Signup/Signin</h3><br/>
+                    <p>Sign up or Sign in to access your orders, special offers, health tips and more!</p><br/><br/>
+                    <label style="color:teal;"><b>Email</b></label><br />
+                    <form method="POST">
+                        {% csrf_token %}
+                        <input class="input" type="email" placeholder="Enter Your email here " name="email" required/><br />
+                        <input  class="submit" type="submit" value="GET OTP" />
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </center>
+    
+</body>
+</html>

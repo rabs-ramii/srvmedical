@@ -1,0 +1,223 @@
+{%include "header.html" with count=count%} {% load static %}
+<center>
+  <h2>Grab ! your best Discount Today</h2>
+  <div class="offer-ad">
+    <div class="ad">
+      <img src="{% static 'ads/srmad.jpg' %}" width="100%" />
+    </div>
+  </div>
+  <h2>Most Popular Products</h2>
+  <div class="owl-carousel owl-theme">
+    {%for product in myproducts%}
+    <div class="item">
+      <div class="med-container">
+        <img src="/media/{{product.image}}" class="popular-me-img" />
+        <div id="id"></div>
+        <span class="product-name">{{product.product_name}}</span>
+        <span>Price:{{product.discounted_price|floatformat:"2"}} </span
+        ><span style="text-decoration: line-through; font-size: 14px"
+          >{{product.price}}</span
+        ><br />
+        <span>Discount:{{product.discount}}%</span><br />
+        <a class="btn btn-success" href="{% url 'add_cart' product.id %}"
+          >Add to Cart</a
+        >
+      </div>
+    </div>
+    {%endfor%}
+  </div>
+  <h2>Shop by Categories</h2>
+  <div class="owl-carousel owl-theme">
+    <div class="item">
+      <div class="med-container">
+        <div class="popular-me">
+          <img
+            src="{% static 'categories/bandages.png'%}"
+            width="200px"
+            height="180px"
+          />
+        </div>
+        <label>
+          <h4>
+            <a href="{% url 'category_product' 'bandages' %}" class="link"
+              ><h4>Bandages</h4></a
+            >
+          </h4>
+        </label>
+      </div>
+    </div>
+    <div class="item">
+      <div class="med-container">
+        <div class="popular-me">
+          <img
+            src="{% static 'categories/vitamin.png'%}"
+            width="200px"
+            height="180px"
+          />
+        </div>
+        <label>
+          <a
+            href="{% url 'category_product' 'vitamins supplements' %}"
+            class="link"
+            ><h4>Vitamins Supplements</h4></a
+          >
+        </label>
+      </div>
+    </div>
+    <div class="item">
+      <div class="med-container">
+        <div class="popular-me">
+          <img
+            src="{% static 'categories/sports.png'%}"
+            width="200px"
+            height="180px"
+          />
+        </div>
+        <label>
+          <a
+            href="{% url 'category_product' 'Sports Supplements' %}"
+            class="link"
+            ><h4>Sports Supplements</h4></a
+          >
+        </label>
+      </div>
+    </div>
+    <div class="item">
+      <div class="med-container">
+        <div class="popular-me">
+          <img
+            src="{% static 'categories/orthopaedics.png'%}"
+            width="200px"
+            height="180px"
+          />
+        </div>
+        <label>
+          <a href="{% url 'category_product' 'Orthopaedics' %}" class="link"
+            ><h4>Orthopaedics</h4></a
+          >
+        </label>
+      </div>
+    </div>
+    <div class="item">
+      <div class="med-container">
+        <div class="popular-me">
+          <img
+            src="{% static 'categories/bodycare.png'%}"
+            width="200px"
+            height="180px"
+          />
+        </div>
+        <label>
+          <a href="{% url 'category_product' 'Body Care' %}" class="link">
+            <h4>Body Care</h4></a
+          >
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="feature-container">
+      <div>
+        <label>
+          <h3
+            style="
+              background-image: linear-gradient(to top, crimson, orange);
+              padding: 4px 4px;
+            "
+          >
+            Home Delivery in 30 minutes !
+          </h3>
+          <br />
+        </label>
+
+        <p>
+          Why step out when you can get everything delivered home with the tap
+          of a button?<br /><br />
+          <b>Patna's favourite Medicine delivery app</b> gets you your Medicines
+          at your doorstep<br />
+        </p>
+        <br /><br />
+        <input type="button" value="ORDER NOW" class="cart-btn" />
+      </div>
+
+      <div class="feature-img">
+        <img
+          src="{% static 'icons/delivery-agent.png'%}"
+          width="190px"
+          height="220px"
+        />
+      </div>
+    </div>
+    <div class="feature-container">
+      <div>
+        <label>
+          <h3
+            style="
+              background-image: linear-gradient(to top, crimson, orange);
+              padding: 4px 4px;
+            "
+          >
+            Talk to our Doctor
+          </h3>
+          <br />
+        </label>
+
+        <p>
+          Don't self medicate.Talk to an Expert.<br /><br />
+          <b>Consult to a dcotor in less than 2 minutes.</b><br />
+        </p>
+        <br /><br />
+        <input type="button" value="CALL NOW" class="cart-btn" />
+      </div>
+
+      <div class="feature-img">
+        <img
+          src="{% static 'icons/doctor.png'%}"
+          width="190px"
+          height="220px"
+        />
+      </div>
+    </div>
+  </div>
+
+  {%include "footer.html"%}
+
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+    integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+    integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <script>
+    $(".owl-carousel").owlCarousel({
+      loop: false,
+      margin: 10,
+
+      autoplay: true,
+      autoplayTime: 300,
+      responsive: {
+        0: {
+          items: 1,
+        },
+        600: {
+          items: 3,
+        },
+        1000: {
+          items: 4,
+        },
+      },
+    });
+
+    function function_id(id) {
+      alert("Button clicked!");
+
+      // You can add more JavaScript code here to execute when the button is clicked
+    }
+  </script>
+</center>

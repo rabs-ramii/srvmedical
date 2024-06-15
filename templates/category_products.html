@@ -1,0 +1,30 @@
+{%include "header.html" with count=payment_summary.count%} {%load static%}
+<center>
+  {%if products%}
+  <h3>Similar Products</h3>
+
+  <div class="container">
+    <div class="productsearch-container">
+       {%for product in products%}
+        <div class="item">
+            <div class="med-container">
+                <img src="/media/{{product.image}}" class="popular-me-img" />
+                <div id="id"></div>
+                <span class="product-name">{{product.product_name}}</span>
+                <span>Price:{{product.discounted_price|floatformat:"2"}} </span
+                ><span style="text-decoration: line-through; font-size: 14px"
+                >{{product.price}}</span
+                ><br />
+                <span>Discount:{{product.discount}}%</span><br />
+                <a class="btn btn-success" href="{% url 'add_cart' product.id %}"
+                >Add to Cart</a>
+            
+            </div>
+        </div>
+    {%endfor%}
+            
+       
+  {%else%}
+  <h3>No Products found for this category</h3>
+  {%endif%}
+</center>

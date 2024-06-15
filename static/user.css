@@ -1,0 +1,510 @@
+ /*css for all body starts here */
+ * {
+     margin: 0;
+     padding: 0;
+
+     font-family: 'Times New Roman', Times, serif;
+ }
+ 
+ 
+ /*css for all body ends here */
+
+ /*css for header  starts here */
+ .container-nav {
+     display: flex;
+     justify-content: space-evenly;
+     padding: 25px 5px;
+     background-image: linear-gradient(#24cd54c0, teal);
+     margin-bottom: 20px;
+     /*position: sticky;
+            top:0;*/
+ }
+ .bg-color {
+     display: flex;
+     justify-content: space-evenly;
+     padding: 15px 5px;
+     background-image: linear-gradient(#24cd54c0, teal);
+     margin-bottom: 20px;
+ }
+
+ .logo h1 {
+     margin-left: 20px;
+     margin-right: 30px;
+
+ }
+ .d-flex {
+    margin-left: 10px;
+
+ }
+
+ .btn-success {
+    background-image: linear-gradient(#24cd54c0, teal);
+    width: 150px;
+
+ }
+
+ .btn-success:hover {
+    color: black;
+    background-image: linear-gradient(teal, #24cd54c0);
+ }
+
+ .search-bar {
+     height: 42px;
+ }
+
+ .search-bar input {
+     width: 25vw;
+     height: 42px;
+     border-radius: 6px 6px;
+     border: none;
+     box-shadow: 4px 4px 10px 10px rgba(0, 0, 0, 0.05);
+     background-color: rgba(255, 255, 255, 0.7);
+     padding-left: 10px;
+
+     font-size: medium;
+     color: black;
+     outline: none;
+ }
+.collapse ul {
+    list-style-type: none;
+    display: inline-flex;
+    margin-left: 100px;
+
+
+}
+
+.nav-item {
+
+    font-size: 17px;
+    font-weight: 200;
+    padding-left: 10px;
+    margin-left: 10px;
+
+}
+
+ .nav-li ul {
+     list-style-type: none;
+     display: inline-flex;
+
+
+ }
+.nav-li li:hover {
+    box-shadow: 4px 4px 10px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px 10px;
+}
+
+ 
+
+
+ /*css for header  ends here */
+
+ .offer-ad {
+     margin-top: 5px;
+     height: auto;
+     padding: 10px 10px;
+ }
+
+ h2 {
+     /*background-color:#24cd54c0;*/
+     /* background-image: linear-gradient(#24cd54c0,teal);*/
+     background-color: #a2bee2a8;
+     padding: 10px 2px;
+     box-shadow: 4px 4px 10px 10px rgba(0, 0, 0, 0.05);
+     margin-top: 10px;
+     margin-bottom: 10px;
+ }
+
+ .ad {
+
+     margin-top: 5px;
+     background-repeat: no-repeat;
+     background-size: cover;
+     box-shadow: 4px 4px 10px 10px rgba(0, 0, 0, 0.05);
+ }
+
+ .container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+ }
+
+ .med-container {
+
+     /*background-color:#d9e0ea74;*/
+     background-image: linear-gradient(#24cd54c0, teal);
+     width: 270px;
+     padding: 15px 10px;
+     margin-top: 10px;
+     margin-left: 30px;
+     margin-bottom: 20px;
+
+     border-radius: 10px;
+ }
+
+ .med-container:hover {
+     box-shadow: 4px 4px 10px 6px rgba(0, 0, 0, 0.3);
+
+ }
+
+ .med-container label {
+
+     font-weight: bold;
+     padding-left: 5px;
+ }
+.link {
+    text-decoration: none;
+    color: black;
+}
+ .cart-btn {
+     margin-top: 10px;
+     width: 200px;
+     font-size: 18px;
+     padding: 10px 10px;
+     font-weight: bold;
+     border: none;
+     outline: none;
+     border-radius: 4px 4px;
+     ;
+     box-shadow: 4px 4px 10px 10px rgba(0, 0, 0, 0.05);
+     /*background-image: linear-gradient(#24cd54c0,teal);*/
+
+     background-color: rgb(162, 234, 16);
+
+
+
+ }
+
+ .cart-btn:hover {
+     /* background-image: linear-gradient(to right,#24cd54c0,teal);*/
+     background-color: yellowgreen;
+     box-shadow: 4px 4px 10px 6px rgba(0, 0, 0, 0.3);
+
+ }
+
+ .feature-container {
+     background-color: #d9e0ea74;
+     width: 40%;
+     padding: 15px 10px;
+     margin-top: 10px;
+     margin-left: 40px;
+     margin-bottom: 20px;
+     border-radius: 10px;
+     display: flex;
+
+ }
+
+ .feature-container:hover {
+     box-shadow: 4px 4px 10px 6px rgba(0, 0, 0, 0.3);
+
+ }
+
+ .feature-container div {
+     margin-left: 20px;
+ }
+
+ .feature-img {
+
+     background-image: linear-gradient(#24cd54c0, teal);
+     border-radius: 10px;
+
+ }
+
+ .footer {
+     height: fit-content;
+     padding: 20px 10px;
+     background-image: linear-gradient(#24cd54c0, teal);
+     font-size: 20px;
+ }
+
+ .product-name {
+     text-overflow: ellipsis;
+     white-space: nowrap;
+     display: block;
+     overflow: hidden;
+     width: 12em;
+     font-weight: bold;
+ }
+#id {
+    visibility: hidden;
+}
+
+.popular-me-img {
+    z-index: 1;
+    width: 180px;
+    height: 150px;
+    /* mix-blend-mode:multiply; */
+
+
+
+
+}
+ /* css for index page ends here */
+
+ /*css for user cart page starts from here */
+         .container {
+             display: flex;
+             justify-content: center;
+    
+             justify-content: space-around;
+         }
+                 .productsearch-container {
+                     
+                     width: auto;
+                     padding: 15px 10px;
+                     margin-top: 10px;
+                     margin-bottom: 20px;
+                     border-radius: 10px;
+                     display: flex;
+                     flex-wrap: wrap;
+                     /* Allow flex items to wrap to next line */
+                     justify-content: space-evenly;
+                     /* Distribute items evenly along the main axis */
+                     box-sizing: border-box;
+                 }
+    
+         .products-container {
+             background-color: #d9e0ea74;
+             width:fit-content;
+             padding: 15px 10px;
+             margin-top: 10px;
+             margin-bottom: 20px;
+             border-radius: 10px;
+             display: block;
+         }
+    
+         .products-container table {
+    
+             padding: 10px 10px;
+    
+         }
+    
+         .products-container table td {
+             padding: 3px 40px;
+    
+    
+         }
+    
+         .payment-details {
+             background-color: #d9e0ea74;
+             width:fit-content;
+             padding: 15px 10px;
+             
+             margin-left: 40px;
+             margin-bottom: 20px;
+             border-radius: 10px;
+             display: block;
+             height: fit-content;
+    
+         }
+    
+         .heading {
+             text-align: center;
+             border-bottom: 2px solid black;
+         }
+    
+         .payment-details table {
+            padding: 10px 10px;
+    
+    
+    
+    
+         }
+    
+         .payment-details table td {
+            padding: 2px 30px;
+    
+    
+    
+         }
+    
+         .remove-btn {
+             margin-top: 10px;
+             width: 120px;
+             font-size: 18px;
+             padding: 5px 10px;
+             font-weight: bold;
+             border: none;
+             outline: none;
+             border-radius: 4px 4px;
+             text-decoration: none;
+             box-shadow: 4px 4px 10px 10px rgba(0, 0, 0, 0.03);
+             background-image: linear-gradient(#24cd54c0,teal);
+             /* background-color: rgb(162, 234, 16); */
+             color:black;
+    
+    
+    
+         }
+    
+         .remove-btn:hover {
+             background-image: linear-gradient(to top,#24cd54c0,teal);
+             /* background-color: yellowgreen; */
+             box-shadow: 4px 4px 10px 6px rgba(0, 0, 0, 0.03);
+    
+         }
+         /* css for user cart page ends her */
+
+         /*css for user profile page starts here */
+                  .prescription-head {
+                      background-color: #d9e0ea74;
+                      color: black;
+                      width: 80%;
+                      padding: 10px 10px;
+                      margin-bottom: 20px;
+                      border-radius: 4px 4px;
+        
+                  }
+        
+                  .container {
+                      display: flex;
+        
+        
+                      justify-content: space-around;
+                      margin-bottom: 20px;
+                  }
+                                .profile-menu {
+                                    background-color: #d9e0ea74;
+                                    width: fit-content;
+                                    padding: 15px 15px;
+                                    margin-top: 10px;
+                                    margin-left: 40px;
+                                    margin-bottom: 20px;
+                                    border-radius: 10px;
+                                    display: block;
+                                    height: fit-content;
+                
+                                }
+                
+                                .profile-menu label {
+                                    color: teal;
+                                    font-size: small;
+                                    font-size: 18px;
+                                    padding: 6px 5px;
+                
+                
+                                }
+                
+                                .profile-menu label:hover {
+                                    color: black;
+                                }
+                
+                                .profile-menu div {
+                                    width: 100%;
+                                    border-bottom: 2px solid black;
+                                    margin-top: 10px;
+                                    margin-bottom: 10px;
+                                }
+                
+                                .profile-menu-a {
+                                    text-decoration: none;
+                                    cursor: pointer;
+                                }
+                
+                                .profile-menu-a:hover {
+                                    color: black;
+                                    cursor: pointer;
+                                }
+                
+                                .heading {
+                                    text-align: center;
+                                    border-bottom: 2px solid black;
+                                }
+                 .review-btn {
+                     margin-top: 10px;
+                     width: 150px;
+                     font-size: 18px;
+                     padding: 5px 10px;
+                     font-weight: bold;
+                     border: none;
+                     outline: none;
+                     border-radius: 4px 4px;
+                     ;
+                     box-shadow: 4px 4px 10px 10px rgba(0, 0, 0, 0.03);
+                     /*background-image: linear-gradient(#24cd54c0,teal);*/
+        
+                     background-color: rgb(162, 234, 16);
+        
+        
+        
+                 }
+        
+                 .review-btn:hover {
+                     /* background-image: linear-gradient(to right,#24cd54c0,teal);*/
+                     background-color: yellowgreen;
+                     box-shadow: 4px 4px 10px 6px rgba(0, 0, 0, 0.03);
+        
+                 }
+
+/* csss for update profile page starts here */
+
+.signup-container {
+
+    display: flex;
+    padding: 10px 10px;
+
+
+
+}
+
+.create-ad-section {
+    width: 33vw;
+    height: 70vh;
+
+    padding: 10px 10px;
+    /*background-image: url("/medicines/ads/best_deal.png");*/
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-left: 13%;
+    border-top-left-radius: 10px;
+
+
+}
+
+.create-account-module {
+    width: 33vw;
+    height: 70vh;
+    background-color: rgba(201, 220, 225, 0.5);
+    padding: 10px 15px;
+    text-align: left;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+
+}
+
+.input {
+    width: 20vw;
+    height: 32px;
+    border-radius: 6px 6px;
+    border: none;
+    padding-left: 10px;
+    font-size: small;
+    color: black;
+    outline: none;
+
+
+}
+
+.submit {
+    width: 21vw;
+    height: 35px;
+    padding: 10px 8px;
+    border-radius: 6px 6px;
+    margin-top: 20px;
+    outline: none;
+    background-image: linear-gradient(#24cd54c0, teal);
+    border: none;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+    color:black;
+
+}
+
+.submit:hover {
+    background-image: linear-gradient(to top, #24cd54c0, teal);
+
+}
+
+/*css for upadte profile oage ends here */

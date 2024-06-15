@@ -1,0 +1,35 @@
+{%include "user/header.html" with details=details%}
+{%load static%}
+<center>
+        <h4>your order has been placed successfully</h4>
+        <p>redirecting you to home page in <span id="countdown">5</span> seconds...</p>
+
+    </center>
+
+
+</body>
+<script>
+// Set the initial countdown time in seconds
+var countdownTime = 5;
+
+// Function to update the countdown timer and redirect when it reaches zero
+function updateCountdown() {
+    // Display the remaining time
+    document.getElementById("countdown").innerText = countdownTime;
+
+    // Decrease the countdown time
+    countdownTime--;
+
+    // If countdown reaches zero, redirect to the home page
+    if (countdownTime < 0) {
+        window.location.href = "{% url 'user-index' %}";
+    } else {
+        // Call the function again after 1 second (1000 milliseconds)
+        setTimeout(updateCountdown, 1000);
+    }
+}
+
+// Call the updateCountdown function to start the countdown
+updateCountdown();
+</script>
+</html>
